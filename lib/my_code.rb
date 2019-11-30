@@ -5,6 +5,7 @@ def map(source_array)
   while index < source_array.length do 
     new_array.push(yield(source_array[index]))
     index += 1
-  end 
+  end
+  new_array
 end 
 
