@@ -10,8 +10,13 @@ def map(source_array)
 end 
 
 def reduce(source_array, start_value = nil)
-  running_total = 0 
-  index = 0 
+  if start_value
+    running_total = start_value
+    index = 0 
+  else 
+    running_total = source_array[0]
+    index = 1 
+  end
   while index < source_array.length do 
     running_total = yield(start_value, source_array[index]) 
     index += 1 
