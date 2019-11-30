@@ -1,6 +1,5 @@
 # Your Code Here
-def map(source_array)
-  yield(source_array)
+def map(source_array, block)
+  yield(source_array, block)
 end
 
-map(source_array){|n| n * 2}
